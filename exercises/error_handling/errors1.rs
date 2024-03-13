@@ -25,7 +25,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn generates_nametag_text_for_a_nonempty_name() {
+    fn generates_nametag_text_for_a_nonempty_name() ->Result<String,_>{
         assert_eq!(
             generate_nametag_text("Beyoncé".into()),
             Ok("Hi! My name is Beyoncé".into())
